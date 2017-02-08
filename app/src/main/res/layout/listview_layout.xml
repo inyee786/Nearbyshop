@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Large Text"
-                android:id="@+id/text_list"
+                android:id="@+id/parkingname"
                 android:layout_column="0" />
         </TableRow>
         <TableRow
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/cost_of_apple"
+                android:id="@+id/cost_of_car"
                 android:layout_column="1" />
             <ImageView
                 android:layout_width="30dp"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/no_of_apple"
+                android:id="@+id/no_of_car"
                 android:layout_column="3" />
         </TableRow>
         <TableRow
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/cost_of_orange"
+                android:id="@+id/cost_of_bike"
                 android:layout_column="1" />
             <ImageView
                 android:layout_width="30dp"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/no_of_orange"
+                android:id="@+id/no_of_bike"
                 android:layout_column="3" />
         </TableRow>
     </TableLayout>

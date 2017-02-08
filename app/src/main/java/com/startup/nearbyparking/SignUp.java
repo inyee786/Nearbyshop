@@ -178,7 +178,7 @@ public class SignUp extends AppCompatActivity {
                 Toast.makeText(SignUp.this, "data  canot be inserted user", Toast.LENGTH_SHORT).show();
 
 
-            Intent i = new Intent(SignUp.this, List.class);
+            Intent i = new Intent(SignUp.this, ListVeiw.class);
             startActivity(i);
 
         }

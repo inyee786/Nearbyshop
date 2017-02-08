@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(session.loggedin()){
-            Intent i=new Intent(MainActivity.this, List.class);
+            Intent i=new Intent(MainActivity.this, ListVeiw.class);
             startActivity(i);}
     }
 

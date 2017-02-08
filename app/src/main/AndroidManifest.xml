@@ -28,7 +28,7 @@
         </activity>
         <activity android:name=".UserMainPage" >
         </activity>
-        <activity android:name=".List" >
+        <activity android:name=".ListVeiw" >
         </activity>
     </application>
 

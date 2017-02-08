@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.Cursor;
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Created by Intakhab Ali on 25-01-2017.
  */
@@ -39,6 +42,11 @@ import android.database.Cursor;
    // public static final String COL_1_16 ="HV_PS_BIKE";
     public static final String COL_1_17 ="FAREOFBIKE";
     public static final String COL_1_18 ="NOfBIKE";
+
+
+    private Context mContext;
+    private SQLiteDatabase mDatabase;
+
 
 
     public Databasehelper(Context context) {
@@ -180,6 +188,44 @@ import android.database.Cursor;
 
 
 
+
+
+    //
+    public void openDatabase() {
+        String dbPath = mContext.getDatabasePath(DATABASE_NAME).getPath();
+        if(mDatabase != null && mDatabase.isOpen()) {
+            return;
+        }
+        mDatabase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
+    }
+
+    public void closeDatabase() {
+        if(mDatabase!=null) {
+            mDatabase.close();
+        }
+    }
+
+//fuction to show in list
+
+
+
+
+
+    public List<FareListItem> getList() {
+        FareListItem fair = null;
+        List <FareListItem> productList = new ArrayList<>();
+        openDatabase();
+        Cursor cursor = mDatabase.rawQuery("SELECT * FROM "+TABLE_NAME4, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            fair = new FareListItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            productList.add(fair);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        closeDatabase();
+        return productList;
+    }
 
 
 
