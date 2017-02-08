@@ -190,7 +190,7 @@ import java.util.ArrayList;
 
 
 
-    //
+    /*
     public void openDatabase() {
         String dbPath = mContext.getDatabasePath(DATABASE_NAME).getPath();
         if(mDatabase != null && mDatabase.isOpen()) {
@@ -200,11 +200,11 @@ import java.util.ArrayList;
     }
 
     public void closeDatabase() {
-        if(mDatabase!=null) {
-            mDatabase.close();
+        if(db!=null) {
+            db.close();
         }
     }
-
+*/
 //fuction to show in list
 
 
@@ -214,16 +214,16 @@ import java.util.ArrayList;
     public List<FareListItem> getList() {
         FareListItem fair = null;
         List <FareListItem> productList = new ArrayList<>();
-        openDatabase();
-        Cursor cursor = mDatabase.rawQuery("SELECT * FROM "+TABLE_NAME4, null);
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME4, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            fair = new FareListItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            fair = new FareListItem(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3),cursor.getString(0));
             productList.add(fair);
             cursor.moveToNext();
         }
         cursor.close();
-        closeDatabase();
+
         return productList;
     }
 

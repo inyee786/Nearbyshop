@@ -49,7 +49,7 @@ public class ListVeiw extends AppCompatActivity {
        // listView.setAdapter(new CustomAdapter(this,shopname,costOfApple,numberOfapple,CostOfOrange,numberOfOrange));
 //   showlist();
 
-  context=this;
+//  context=this;
         fList = mDBHelper.getList();
         //Init adapter
         adapter = new CustomAdapter(this, fList);
@@ -61,7 +61,7 @@ public class ListVeiw extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"the position "+position+1,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"the position "+position+1,Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import java.lang.NullPointerException;
+
 public class Address extends AppCompatActivity {
 
 
@@ -64,7 +64,7 @@ public class Address extends AppCompatActivity {
                     if (insertAddress) {
                         Toast.makeText(Address.this, "data inserted Owner ", Toast.LENGTH_SHORT).show();
 
-                        Intent i = new Intent(Address.this, Fare.class);
+                        Intent i = new Intent(Address.this, Fair.class);
                         startActivity(i);
                     } else {
                         Toast.makeText(Address.this, "data  cannot be inserted ", Toast.LENGTH_SHORT).show();
@@ -103,7 +103,7 @@ public class Address extends AppCompatActivity {
             if (insertAddress) {
                 Toast.makeText(Address.this, "data inserted user", Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(Address.this, Fare.class);
+                Intent i = new Intent(Address.this, Fair.class);
                 startActivity(i);
             } else {
                 Toast.makeText(Address.this, "data  cannot be inserted user", Toast.LENGTH_SHORT).show();
@@ -188,7 +188,7 @@ return valid;
         if (insertAddress) {
             Toast.makeText(Address.this, "data inserted user", Toast.LENGTH_SHORT).show();
 
-            Intent i = new Intent(Address.this, Fare.class);
+            Intent i = new Intent(Address.this, Fair.class);
             startActivity(i);
         } else {
             Toast.makeText(Address.this, "data  cannot be inserted user", Toast.LENGTH_SHORT).show();

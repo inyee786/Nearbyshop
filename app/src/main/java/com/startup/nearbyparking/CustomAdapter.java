@@ -22,29 +22,25 @@ public class CustomAdapter extends BaseAdapter {
 
 
 
-   //String[] shopname;
+   String[] shopname;
 /*    String[] costOfApple;
     String[] numberOfapple;
     String[] numberOfOrange;
     String[] CostOfOrange;
-
-
-
-
-
-
-    String items[];
-
-    ListVeiw list;
+        String items[];
+ListVeiw list;
     LayoutInflater layoutInflater=null;
   */
     Context context;
-    ArrayList<FareListItem> fareList;
+    List<FareListItem> fareList;
 
-    public CustomAdapter(Context context, ArrayList<FareListItem> fareList) {
+    public CustomAdapter(Context context, List<FareListItem> fareList) {
         this.context = context;
         this.fareList = fareList;
+     //   this.shopname = shopname;
     }
+
+
 
 
 
@@ -82,27 +78,17 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-
-
-
-
-
-
-
-
         View v = View.inflate(context, R.layout.listview_layout, null);
         TextView carPrice = (TextView)v.findViewById(R.id.cost_of_car);
         TextView  nocar= (TextView)v.findViewById(R.id.no_of_car);
         TextView bikePrice = (TextView)v.findViewById(R.id.cost_of_bike);
         TextView  nobike= (TextView)v.findViewById(R.id.no_of_bike);
-        //TextView  parname= (TextView)v.findViewById(R.id.parkingname);
+        TextView  parname= (TextView)v.findViewById(R.id.parkingname);
         carPrice.setText(fareList.get(position).getFcar());
         nocar.setText(fareList.get(position).getNcar());
         bikePrice.setText(fareList.get(position).getFbike());
         nobike.setText(fareList.get(position).getNbike());
-        //parname.setText(shopname[position]);
-
+        parname.setText(fareList.get(position).getPsname());
         return v;
 
 

@@ -9,18 +9,18 @@ public class FareListItem extends Object{
 
 
 
-    //String psname;
+    String psname;
     String fcar;
     String ncar;
     String fbike;
     String nbike;
 
-    public FareListItem(String fcar, String fbike, String nbike, String ncar) {
+    public FareListItem(String fcar, String fbike, String nbike, String ncar,String psname) {
         this.fcar = fcar;
         this.fbike = fbike;
         this.nbike = nbike;
         this.ncar = ncar;
-
+       this.psname=psname;
     }
 
 
@@ -56,11 +56,11 @@ public class FareListItem extends Object{
         this.ncar = ncar;
     }
 
-  /*  public String getPsname() {
+   public String getPsname() {
         return psname;
     }
 
     public void setPsname(String psname) {
         this.psname = psname;
-    }*/
+    }
 }

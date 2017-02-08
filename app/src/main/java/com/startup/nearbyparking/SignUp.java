@@ -82,7 +82,7 @@ public class SignUp extends AppCompatActivity {
                             Toast.makeText(SignUp.this, "data  cannot be inserted owner", Toast.LENGTH_SHORT).show();
                         }
 
-                        Intent i = new Intent(SignUp.this, Address.class);
+                        Intent i = new Intent(SignUp.this, Fair.class);
                         startActivity(i);
                     }
                     else if (r1.getText().equals("Are_u_the_user")) {

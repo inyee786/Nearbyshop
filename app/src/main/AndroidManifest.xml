@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".SignUp" >
         </activity>
-        <activity android:name=".Fare" >
+        <activity android:name=".Fair" >
         </activity>
         <activity android:name=".Address" >
         </activity>
